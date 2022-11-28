@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <!-- MOBILE MENU with DROPDOWN MENU-->
+      <nav class="nav__bar">
+        <ul class="nav__links">
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Videos</a></li>
+          <li>
+            <a href="#" id="dropdown__header">More ↓</a>
+            <div class="dropdown__container">
+              <div class="dropdown__item">Item 1</div>
+              <div class="dropdown__item">Item 2</div>
+              <div class="dropdown__item">Item 3</div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Image Slider -->
+      <div class="slider__container" id="imageSlider">
+        <div class="slider__buttons">
+          <div class="slider__button" id="sliderForward">
+            <span class="material-symbols-outlined"> chevron_right </span>
+          </div>
+          <div class="slider__button" id="sliderBackward">
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </div>
+        </div>
+        <div class="slider__container--bottom">
+          <img src="" alt="slider image" class="slider__container--image" />
+          <img src="" alt="slider image" class="slider__container--image" />
+          <img src="" alt="slider image" class="slider__container--image" />
+        </div>
+        <div class="slider__indicator--container">
+          <div class="slider__indicator"></div>
+          <div class="slider__indicator"></div>
+          <div class="slider__indicator"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
